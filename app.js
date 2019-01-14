@@ -1,6 +1,6 @@
 const app = angular.module('app', ['ui.router'])
 
-app.config(($stateProvider, $urlRouterProvider) => {
+app.config(($stateProvider) => {
 
   $stateProvider.state({
     name: 'pa',
@@ -14,7 +14,10 @@ app.config(($stateProvider, $urlRouterProvider) => {
     templateUrl: './templates/b.html'
   });
 
-  $urlRouterProvider.otherwise('/page-a');
+});
 
+app.run(($state) => {
+  console.log("### change state to 'pb'")
+  $state.go('pb')
 });
 
