@@ -7,5 +7,5 @@ Note: You can inject `$state` in `config`.
 
 ```
 npm install
-npm run demo
+npm start
 ```
